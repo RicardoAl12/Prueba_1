@@ -1,0 +1,65 @@
+/* Estilo para la barra de navegación */
+.menu {
+    width: 100%;
+    background-color: #000; /* Color de fondo negro */
+}
+
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.brand-logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Color del texto blanco */
+    text-decoration: none;
+}
+
+.nav-link {
+    color: #fff; /* Color del texto blanco */
+    text-decoration: none;
+    font-size: 18px;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.activo {
+    background-color: #444; /* Fondo oscuro al pasar el cursor o al estar activo */
+    color: #fff; /* Color del texto blanco */
+    border-radius: 4px;
+}
+
+#nav-mobile {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+#nav-mobile li {
+    margin: 0;
+}
+
+/* Para pantallas más pequeñas */
+@media screen and (max-width: 992px) {
+    .nav-wrapper {
+        flex-direction: column;
+    }
+
+    #nav-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .nav-link {
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #444;
+    }
+}
